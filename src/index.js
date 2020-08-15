@@ -32,3 +32,5 @@ asyncBtn.addEventListener("click", () => {
 themeBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark");
 });
+
+render();
