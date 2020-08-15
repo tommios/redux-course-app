@@ -12,11 +12,19 @@ const store = createStore(rootReducer, 0);
 
 // window.store = store; // for watch in console
 
-addBtn.addEventListener("click", () => {});
+addBtn.addEventListener("click", () => {
+  store.dispatch({ type: "INCREMENT" });
+});
 
-subBtn.addEventListener("click", () => {});
+subBtn.addEventListener("click", () => {
+  store.dispatch({ type: "DECREMENT" });
+});
 
 asyncBtn.addEventListener("click", () => {});
+
+store.subscribe(() => {
+  console.log(store.getState());
+});
 
 themeBtn.addEventListener("click", () => {
   //document.body.classList.toggle("dark");
