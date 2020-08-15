@@ -23,7 +23,9 @@ subBtn.addEventListener("click", () => {
 asyncBtn.addEventListener("click", () => {});
 
 store.subscribe(() => {
-  console.log(store.getState());
+  const state = store.getState();
+
+  counter.textContent = state;
 });
 
 themeBtn.addEventListener("click", () => {
